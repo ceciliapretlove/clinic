@@ -1,9 +1,20 @@
 /*    Layouts     */
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/poppins/Poppins-Regular.ttf"); }
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../fonts/poppins/Poppins-Medium.ttf"); }
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../fonts/poppins/Poppins-SemiBold.ttf"); }
 
+  
 body {
   min-height: 100vh;
   position: relative;
   background: $grey2-color;
+  font-family: "Poppins-Regular";
 }
 
 .no-bd{

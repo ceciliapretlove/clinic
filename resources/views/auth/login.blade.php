@@ -1,11 +1,22 @@
 @extends('layouts.app')
-
+<style type="text/css">
+    .login-panel {
+        font-family: "Poppins-Regular";
+    padding: 150px 50px;
+    color: #fff;
+}
+.form-group label{
+        color: #fff!important;
+}
+</style>
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+<div class="container-fluid" style="height:100%; min-height:100%">
+    <div class="row"  style="height:100%; min-height:100%">
+
+        <div class="col-6"></div>
+        <div class="col-6" style="background: #303f9f; color:#fff;">
+        <div class="panel panel-default login-panel">
+                <h1 class="panel-heading">Login</h1>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
@@ -14,7 +25,7 @@
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -28,7 +39,7 @@
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <input id="password" type="password" class="form-control" name="password" required>
 
                                 @if ($errors->has('password'))
