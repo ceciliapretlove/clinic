@@ -18,7 +18,12 @@
         <div class="panel panel-default login-panel">
                 <h1 class="panel-heading">Login</h1>
 
+
                 <div class="panel-body">
+                <div class="ml-md-auto py-2 py-md-0">
+                     <a href="/appointment" class="btn btn-white btn-border btn-round mr-2">Patient</a>
+                     <a href="#" class="btn btn-secondary btn-round">Doctor</a>
+                  </div>
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 

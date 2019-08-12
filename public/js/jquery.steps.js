@@ -821,7 +821,7 @@ function refreshPagination(wizard, options, state)
 {
     if (options.enablePagination)
     {
-        var confirm = wizard.find(".actions  onclick=document.getElementById('patient_reg').submit(); ").parent(),
+        var confirm = wizard.find(".actions a[href$='#confirm']").parent(),
             next = wizard.find(".actions a[href$='#next']").parent();
 
         if (!options.forceMoveForward)
