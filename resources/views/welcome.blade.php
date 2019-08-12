@@ -41,7 +41,7 @@
       <!-- Logo Header -->
       <div class="logo-header" data-background-color="blue">
          <a href="index.html" class="logo">
-         <img src="../img/logo.svg" alt="navbar brand" class="navbar-brand">
+         <img src="../img/logo.png" alt="navbar brand" class="navbar-brand">
          </a>
          <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon">
@@ -77,7 +77,7 @@
                   <i class="fa fa-search"></i>
                   </a>
                </li>
-               <li class="nav-item dropdown hidden-caret">
+<!--                <li class="nav-item dropdown hidden-caret">
                   <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fa fa-envelope"></i>
                   </a>
@@ -146,7 +146,7 @@
                         <a class="see-all" href="javascript:void(0);">See all messages<i class="fa fa-angle-right"></i> </a>
                      </li>
                   </ul>
-               </li>
+               </li> -->
                <li class="nav-item dropdown hidden-caret">
                   <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fa fa-bell"></i>
@@ -220,22 +220,22 @@
                               <a class="col-6 col-md-4 p-0" href="#">
                                  <div class="quick-actions-item">
                                     <i class="flaticon-file-1"></i>
-                                    <span class="text">Generated Report</span>
+                                    <span class="text">Medical Certificate</span>
                                  </div>
                               </a>
-                              <a class="col-6 col-md-4 p-0" href="#">
+<!--                               <a class="col-6 col-md-4 p-0" href="#">
                                  <div class="quick-actions-item">
                                     <i class="flaticon-database"></i>
                                     <span class="text">Create New Database</span>
                                  </div>
-                              </a>
+                              </a> -->
                               <a class="col-6 col-md-4 p-0" href="#">
                                  <div class="quick-actions-item">
                                     <i class="flaticon-pen"></i>
-                                    <span class="text">Create New Post</span>
+                                    <span class="text">Prescription</span>
                                  </div>
                               </a>
-                              <a class="col-6 col-md-4 p-0" href="#">
+  <!--                             <a class="col-6 col-md-4 p-0" href="#">
                                  <div class="quick-actions-item">
                                     <i class="flaticon-interface-1"></i>
                                     <span class="text">Create New Task</span>
@@ -252,7 +252,7 @@
                                     <i class="flaticon-file"></i>
                                     <span class="text">Create New Invoice</span>
                                  </div>
-                              </a>
+                              </a> -->
                            </div>
                         </div>
                      </div>
@@ -270,7 +270,7 @@
                            <div class="user-box">
                               <div class="avatar-lg"><img src="../img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
                               <div class="u-text">
-                                 <h4>Hizrian</h4>
+                                 <h4>John Doe</h4>
                                  <p class="text-muted">hello@example.com</p>
                                  <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
                               </div>
@@ -279,9 +279,6 @@
                         <li>
                            <div class="dropdown-divider"></div>
                            <a class="dropdown-item" href="#">My Profile</a>
-                           <a class="dropdown-item" href="#">My Balance</a>
-                           <a class="dropdown-item" href="#">Inbox</a>
-                           <div class="dropdown-divider"></div>
                            <a class="dropdown-item" href="#">Account Setting</a>
                            <div class="dropdown-divider"></div>
                            <a class="dropdown-item" href="#">Logout</a>
@@ -305,8 +302,8 @@
                <div class="info">
                   <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
                   <span>
-                  Hizrian
-                  <span class="user-level">Administrator</span>
+                  John Doe
+                  <span class="user-level">Patient</span>
                   <span class="caret"></span>
                   </span>
                   </a>
@@ -337,9 +334,9 @@
                   <a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
                      <i class="fas fa-home"></i>
                      <p>Dashboard</p>
-                     <span class="caret"></span>
+<!--                      <span class="caret"></span> -->
                   </a>
-                  <div class="collapse" id="dashboard">
+<!--                   <div class="collapse" id="dashboard">
                      <ul class="nav nav-collapse">
                         <li>
                            <a href="../demo1/index.html">
@@ -352,9 +349,9 @@
                            </a>
                         </li>
                      </ul>
-                  </div>
+                  </div> -->
                </li>
-               <li class="nav-section">
+<!--                <li class="nav-section">
                   <span class="sidebar-mini-icon">
                   <i class="fa fa-ellipsis-h"></i>
                   </span>
@@ -456,6 +453,27 @@
                         </li>
                      </ul>
                   </div>
+               </li> -->
+                  <li class="nav-item">
+                  <a data-toggle="collapse" href="#tables">
+                     <i class="fas fa-table"></i>
+                     <p>Appointment</p>
+<!--                      <span class="caret"></span> -->
+                  </a>
+<!--                   <div class="collapse" id="tables">
+                     <ul class="nav nav-collapse">
+                        <li>
+                           <a href="tables/tables.html">
+                           <span class="sub-item">Basic Table</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="tables/datatables.html">
+                           <span class="sub-item">Datatables</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div> -->
                </li>
                <li class="nav-item">
                   <a data-toggle="collapse" href="#forms">
@@ -473,28 +491,8 @@
                      </ul>
                   </div>
                </li>
-               <li class="nav-item">
-                  <a data-toggle="collapse" href="#tables">
-                     <i class="fas fa-table"></i>
-                     <p>Tables</p>
-                     <span class="caret"></span>
-                  </a>
-                  <div class="collapse" id="tables">
-                     <ul class="nav nav-collapse">
-                        <li>
-                           <a href="tables/tables.html">
-                           <span class="sub-item">Basic Table</span>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="tables/datatables.html">
-                           <span class="sub-item">Datatables</span>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </li>
-               <li class="nav-item">
+
+<!--                <li class="nav-item">
                   <a data-toggle="collapse" href="#maps">
                      <i class="fas fa-map-marker-alt"></i>
                      <p>Maps</p>
@@ -591,7 +589,7 @@
                </li>
                <li class="mx-4 mt-2">
                   <a href="http://themekita.com/atlantis-bootstrap-dashboard.html" class="btn btn-primary btn-block"><span class="btn-label mr-2"> <i class="fa fa-heart"></i> </span>Buy Pro</a> 
-               </li>
+               </li> -->
             </ul>
          </div>
       </div>
@@ -604,17 +602,16 @@
                <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
                   <div>
                      <h2 class="text-white pb-2 fw-bold">Dashboard</h2>
-                     <h5 class="text-white op-7 mb-2">Free Bootstrap 4 Admin Dashboard</h5>
                   </div>
-                  <div class="ml-md-auto py-2 py-md-0">
+<!--                   <div class="ml-md-auto py-2 py-md-0">
                      <a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>
                      <a href="#" class="btn btn-secondary btn-round">Add Customer</a>
-                  </div>
+                  </div> -->
                </div>
             </div>
          </div>
          <div class="page-inner mt--5">
-            <div class="row mt--2">
+<!--             <div class="row mt--2">
                <div class="col-md-6">
                   <div class="card full-height">
                      <div class="card-body">
@@ -661,8 +658,8 @@
                      </div>
                   </div>
                </div>
-            </div>
-            <div class="row">
+            </div> -->
+<!--             <div class="row">
                <div class="col-md-8">
                   <div class="card">
                      <div class="card-header">
@@ -718,128 +715,46 @@
                      </div>
                   </div>
                </div>
-            </div>
+            </div> -->
             <div class="row row-card-no-pd">
                <div class="col-md-12">
                   <div class="card">
                      <div class="card-header">
                         <div class="card-head-row card-tools-still-right">
-                           <h4 class="card-title">Users Geolocation</h4>
+                           <h4 class="card-title">Patient's Medical History</h4>
                            <div class="card-tools">
                               <button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-angle-down"></span></button>
                               <button class="btn btn-icon btn-link btn-primary btn-xs btn-refresh-card"><span class="fa fa-sync-alt"></span></button>
                               <button class="btn btn-icon btn-link btn-primary btn-xs"><span class="fa fa-times"></span></button>
                            </div>
                         </div>
-                        <p class="card-category">
-                           Map of the distribution of users around the world
-                        </p>
                      </div>
                      <div class="card-body">
                         <div class="row">
-                           <div class="col-md-6">
+                           <div class="col-md-12">
                               <div class="table-responsive table-hover table-sales">
                                  <table class="table">
                                     <tbody>
                                        <tr>
                                           <td>
-                                             <div class="flag">
-                                                <img src="../img/flags/id.png" alt="indonesia">
-                                             </div>
                                           </td>
-                                          <td>Indonesia</td>
-                                          <td class="text-right">
-                                             2.320
-                                          </td>
-                                          <td class="text-right">
-                                             42.18%
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <td>
-                                             <div class="flag">
-                                                <img src="../img/flags/us.png" alt="united states">
-                                             </div>
-                                          </td>
-                                          <td>USA</td>
-                                          <td class="text-right">
-                                             240
-                                          </td>
-                                          <td class="text-right">
-                                             4.36%
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <td>
-                                             <div class="flag">
-                                                <img src="../img/flags/au.png" alt="australia">
-                                             </div>
-                                          </td>
-                                          <td>Australia</td>
-                                          <td class="text-right">
-                                             119
-                                          </td>
-                                          <td class="text-right">
-                                             2.16%
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <td>
-                                             <div class="flag">
-                                                <img src="../img/flags/ru.png" alt="russia">
-                                             </div>
-                                          </td>
-                                          <td>Russia</td>
-                                          <td class="text-right">
-                                             1.081
-                                          </td>
-                                          <td class="text-right">
-                                             19.65%
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <td>
-                                             <div class="flag">
-                                                <img src="../img/flags/cn.png" alt="china">
-                                             </div>
-                                          </td>
-                                          <td>China</td>
-                                          <td class="text-right">
-                                             1.100
-                                          </td>
-                                          <td class="text-right">
-                                             20%
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <td>
-                                             <div class="flag">
-                                                <img src="../img/flags/br.png" alt="brazil">
-                                             </div>
-                                          </td>
-                                          <td>Brasil</td>
-                                          <td class="text-right">
-                                             640
-                                          </td>
-                                          <td class="text-right">
-                                             11.63%
-                                          </td>
+                                        
                                        </tr>
                                     </tbody>
                                  </table>
                               </div>
                            </div>
-                           <div class="col-md-6">
+<!--                            <div class="col-md-6">
                               <div class="mapcontainer">
                                  <div id="map-example" class="vmap"></div>
                               </div>
-                           </div>
+                           </div> -->
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="row">
+<!--             <div class="row">
                <div class="col-md-4">
                   <div class="card">
                      <div class="card-header">
@@ -1112,32 +1027,13 @@
                      </div>
                   </div>
                </div>
-            </div>
+            </div> -->
          </div>
       </div>
       <footer class="footer">
          <div class="container-fluid">
-            <nav class="pull-left">
-               <ul class="nav">
-                  <li class="nav-item">
-                     <a class="nav-link" href="https://www.themekita.com">
-                     ThemeKita
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">
-                     Help
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">
-                     Licenses
-                     </a>
-                  </li>
-               </ul>
-            </nav>
             <div class="copyright ml-auto">
-               2018, made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.themekita.com">ThemeKita</a>
+              <a>Copyright 2019 Clinic</a>
             </div>
          </div>
       </footer>
@@ -1208,9 +1104,9 @@
             </div>
          </div>
       </div>
-      <div class="custom-toggle">
+<!--       <div class="custom-toggle">
          <i class="flaticon-settings"></i>
-      </div>
+      </div> -->
    </div>
    <!-- End Custom template -->
 </div>

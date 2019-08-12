@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Atlantis Lite - Bootstrap 4 Admin Dashboard</title>
+    <title>Clinic</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <link rel="icon" href="../img/icon.ico" type="image/x-icon"/>
 
@@ -55,8 +55,8 @@
     <script src="../js/plugin/datatables/datatables.min.js"></script>
 
     <!-- Bootstrap Notify -->
-    <script src="../js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-
+<!--     <script src="../js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+ -->
     <!-- jQuery Vector Maps -->
     <script src="../js/plugin/jqvmap/jquery.vmap.min.js"></script>
     <script src="../js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
