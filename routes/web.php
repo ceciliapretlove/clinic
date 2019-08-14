@@ -18,7 +18,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/appointment', 'PatientController@index');
 
 Route::get('activate/{token}', 'Auth\RegisterController@activate')
     ->name('activate');
+
+
+//Patient's Appointment
+Route::get('/patient/register', 'PatientController@index');
+Route::get('/patient/readPatientAppointment','PatientController@read');
+Route::post('/patient/createPatientAppointmentForm', 'PatientController@create');
+Route::post('/patient/getPatientAppointment', 'PatientController@get');
+Route::post('/patient/updatePatientAppointmentForm', 'PatientController@update');

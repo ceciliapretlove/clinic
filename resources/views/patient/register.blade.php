@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Appointment</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="author" content="colorlib.com">
+    <head>
+        <meta charset="utf-8">
+        <title>Appointment</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="colorlib.com">
 
-		<!-- MATERIAL DESIGN ICONIC FONT -->
+        <!-- MATERIAL DESIGN ICONIC FONT -->
         <link href="{{ asset('fonts/material-design-iconic-font/css/material-design-iconic-font.css') }}" rel="stylesheet">
 
-		<!-- DATE-PICKER -->
+        <!-- DATE-PICKER -->
         <link href="{{ asset('css/date-picker/css/datepicker.min.css') }}" rel="stylesheet">
 
-		<!-- STYLE CSS -->
+        <!-- STYLE CSS -->
         <link href="{{ asset('css/reg.css') }}" rel="stylesheet">
-	</head>
-	<body>
-		<div class="wrapper">
-            <form action="POST" id="patientsAppointment" class="wizard">
-        		<!-- SECTION 1 -->
+    </head>
+    <body>
+        <div class="wrapper">
+            <form action="POST" id="patientAppointment" class="wizard">
+                <!-- SECTION 1 -->
                 <h4></h4>
                 <section>
                     <h3>Personal Information</h3>
-                	<div class="form-row">
+                    <div class="form-row">
                         <div class="form-col">
                             <label for="">
                                 First Name
@@ -41,7 +41,7 @@
                                 <input type="text" id="lname"  name="lname" class="form-control">
                             </div>
                         </div>
-                	</div>
+                    </div>
                     <div class="form-row">
                         <div class="form-col">
                             <label for="">
@@ -90,10 +90,10 @@
                     </div>
                 </section>
                 
-				<!-- SECTION 2 -->
+                <!-- SECTION 2 -->
                 <h4></h4>
                 <section>
-                	<h3>Appointment</h3>
+                    <h3>Appointment</h3>
                     <div class="form-row">
                         <div class="form-col" style="width: 100%!important">
                             <label for="">
@@ -204,9 +204,14 @@
                             </div>
                         </div>
                     </div>
+                    <!-- <div class="form-row">
+                        <div class="form-col" style="width:100%!important;">
+                            <button type="submit" class="btn btn-success btn-block">FINISH</button>
+                        </div>
+                    </div> -->
                 </section>
             </form>
-		</div>
+        </div>
         <script type="text/javascript" src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/jquery.steps.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/datepicker.js') }}"></script>

@@ -1,5 +1,5 @@
 $(function(){
-	$("#wizard").steps({
+	$(".wizard").steps({
         headerTag: "h4",
         bodyTag: "section",
         transitionEffect: "fade",
@@ -28,13 +28,14 @@ $(function(){
     });
     // Custom Button Jquery Steps
     $('.forward').click(function(){
-    	$("#wizard").steps('next');
+    	$(".wizard").steps('next');
     })
     $('.backward').click(function(){
-        $("#wizard").steps('previous');
+        $(".wizard").steps('previous');
     })
     // Grid 
     $('.grid .grid-item').click(function(){
+        alert('grid');
         $('.grid .grid-item').removeClass('active');
         $(this).addClass('active');
     })
@@ -47,6 +48,23 @@ $(function(){
         }
     }) 
     // Date Picker
-    var dp1 = $('#dp1').datepicker().data('datepicker');
-    dp1.selectDate( new Date( ));
+    // var dp1 = $('#dp1').datepicker().data('datepicker');
+    // dp1.selectDate( new Date( ));
 })
+
+  // $('#patientAppointment').on('submit', function(e)
+  // {
+  //   alert('hello');
+  //   // $('.modal-message').html('');
+  //   // $('.error-message').html(""); //reset messages
+  //   // $('.form-group').removeClass('has-error');
+  //   // var post_data = $('#patientAppointment').serialize();
+  //   // simPost(post_data, 'POST', '/patient/createPatientAppointmentForm', createPatientAppointmentFormResponse); 
+  //   // e.preventDefault();
+  //   // return false;
+  // });
+
+  // function createPatientAppointmentFormResponse ( response )
+  // {
+  //   alert('hello');
+  // }

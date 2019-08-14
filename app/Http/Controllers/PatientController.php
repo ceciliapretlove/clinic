@@ -23,6 +23,18 @@ class PatientController extends Controller
      */
     public function index()
     {
-        return view('patientRegister');
+        return view('/patient/register');
+    }
+
+    public function read()
+    {
+        $result = Patient::readPatient();
+        return \Response::json($result);
+    }
+
+    public function create( request $request )
+    {
+        $result = Patient::create($request);
+        return \Response::json($result);
     }
 }

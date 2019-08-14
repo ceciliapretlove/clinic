@@ -267,22 +267,22 @@ function destroy(wizard, options)
 }
 
 /**
- * Triggers the onconfirming and onconfirmed event.
+ * Triggers the onfinishing and onfinished event.
  *
  * @static
  * @private
- * @method confirmStep
+ * @method finishStep
  * @param wizard {Object} The jQuery wizard object
  * @param state {Object} The state container of the current wizard
  **/
-function confirmStep(wizard, state)
+function finishStep(wizard, state)
 {
     var currentStep = wizard.find(".steps li").eq(state.currentIndex);
 
-    if (wizard.triggerHandler("confirming", [state.currentIndex]))
+    if (wizard.triggerHandler("finishing", [state.currentIndex]))
     {
         currentStep.addClass("done").removeClass("error");
-        wizard.triggerHandler("confirmed", [state.currentIndex]);
+        wizard.triggerHandler("finished", [state.currentIndex]);
     }
     else
     {
@@ -793,8 +793,8 @@ function paginationClickHandler(event)
             cancel(wizard);
             break;
 
-        case "confirm":
-            confirmStep(wizard, state);
+        case "finish":
+            finishStep(wizard, state);
             break;
 
         case "next":
@@ -821,7 +821,7 @@ function refreshPagination(wizard, options, state)
 {
     if (options.enablePagination)
     {
-        var confirm = wizard.find(".actions a[href$='#confirm']").parent(),
+        var finish = wizard.find(".actions a[href$='#finish']").parent(),
             next = wizard.find(".actions a[href$='#next']").parent();
 
         if (!options.forceMoveForward)
@@ -830,16 +830,16 @@ function refreshPagination(wizard, options, state)
             previous._enableAria(state.currentIndex > 0);
         }
 
-        if (options.enableconfirmButton && options.showconfirmButtonAlways)
+        if (options.enablefinishButton && options.showfinishButtonAlways)
         {
-            confirm._enableAria(state.stepCount > 0);
+            finish._enableAria(state.stepCount > 0);
             next._enableAria(state.stepCount > 1 && state.stepCount > (state.currentIndex + 1));
         }
         else
         {
-            confirm._showAria(options.enableconfirmButton && state.stepCount === (state.currentIndex + 1));
+            finish._showAria(options.enablefinishButton && state.stepCount === (state.currentIndex + 1));
             next._showAria(state.stepCount === 0 || state.stepCount > (state.currentIndex + 1)).
-                _enableAria(state.stepCount > (state.currentIndex + 1) || !options.enableconfirmButton);
+                _enableAria(state.stepCount > (state.currentIndex + 1) || !options.enablefinishButton);
         }
     }
 }
@@ -910,8 +910,8 @@ function registerEvents(wizard, options)
 
     wizard.bind("canceled" + eventNamespace, options.onCanceled);
     wizard.bind("contentLoaded" + eventNamespace, options.onContentLoaded);
-    wizard.bind("confirming" + eventNamespace, options.onconfirming);
-    wizard.bind("confirmed" + eventNamespace, options.onconfirmed);
+    wizard.bind("finishing" + eventNamespace, options.onfinishing);
+    wizard.bind("finished" + eventNamespace, options.onfinished);
     wizard.bind("init" + eventNamespace, options.onInit);
     wizard.bind("stepChanging" + eventNamespace, options.onStepChanging);
     wizard.bind("stepChanged" + eventNamespace, options.onStepChanged);
@@ -1065,9 +1065,9 @@ function renderPagination(wizard, options, state)
 
         buttons += buttonTemplate.format("next", options.labels.next);
 
-        if (options.enableconfirmButton)
+        if (options.enablefinishButton)
         {
-            buttons += buttonTemplate.format("confirm", options.labels.confirm);
+            buttons += buttonTemplate.format("finish", options.labels.finish);
         }
 
         if (options.enableCancelButton)
@@ -1352,13 +1352,13 @@ $.fn.steps.destroy = function ()
 };
 
 /**
- * Triggers the onconfirming and onconfirmed event.
+ * Triggers the onfinishing and onfinished event.
  *
- * @method confirm
+ * @method finish
  **/
-$.fn.steps.confirm = function ()
+$.fn.steps.finish = function ()
 {
-    confirmStep(this, getState(this));
+    finishStep(this, getState(this));
 };
 
 /**
@@ -1797,14 +1797,14 @@ var defaults = $.fn.steps.defaults = {
     enableCancelButton: false,
 
     /**
-     * Shows the confirm button if enabled.
+     * Shows the finish button if enabled.
      *
-     * @property enableconfirmButton
+     * @property enablefinishButton
      * @type Boolean
      * @default true
      * @for defaults
      **/
-    enableconfirmButton: true,
+    enablefinishButton: true,
 
     /**
      * Not yet implemented.
@@ -1817,15 +1817,15 @@ var defaults = $.fn.steps.defaults = {
     preloadContent: false,
 
     /**
-     * Shows the confirm button always (on each step; right beside the next button) if `true`. 
-     * Otherwise the next button will be replaced by the confirm button if the last step becomes active.
+     * Shows the finish button always (on each step; right beside the next button) if `true`. 
+     * Otherwise the next button will be replaced by the finish button if the last step becomes active.
      *
-     * @property showconfirmButtonAlways
+     * @property showfinishButtonAlways
      * @type Boolean
      * @default false
      * @for defaults
      **/
-    showconfirmButtonAlways: false,
+    showfinishButtonAlways: false,
 
     /**
      * Prevents jumping to a previous step.
@@ -1918,25 +1918,35 @@ var defaults = $.fn.steps.defaults = {
     onCanceled: function (event) { },
 
     /**
-     * Fires before confirming and can be used to prevent completion by returning `false`. 
+     * Fires before finishing and can be used to prevent completion by returning `false`. 
      * Very useful for form validation. 
      *
-     * @property onconfirming
+     * @property onfinishing
      * @type Event
      * @default function (event, currentIndex) { return true; }
      * @for defaults
      **/
-    onconfirming: function (event, currentIndex) { return true; },
+
+    onfinishing: function (event, currentIndex){ 
+        return true; 
+    },
+    // onfinishing: function (event, currentIndex) { 
+        // $("#patientAppointment").submit();
+
+        
+
+    //     return true; 
+    //},
 
     /**
      * Fires after completion. 
      *
-     * @property onconfirmed
+     * @property onfinished
      * @type Event
      * @default function (event, currentIndex) { }
      * @for defaults
      **/
-    onconfirmed: function (event, currentIndex) { },
+    onfinished: function (event, currentIndex) { },
 
     /**
      * Fires after async content is loaded. 
@@ -1999,14 +2009,14 @@ var defaults = $.fn.steps.defaults = {
         pagination: "Pagination",
 
         /**
-         * Label for the confirm button.
+         * Label for the finish button.
          *
-         * @property confirm
+         * @property finish
          * @type String
-         * @default "confirm"
+         * @default "finish"
          * @for defaults
          **/
-        confirm: "confirm",
+        finish: "finish",
 
         /**
          * Label for the next button.
