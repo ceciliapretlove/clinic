@@ -29,3 +29,12 @@ Route::get('/patient/readPatientAppointment','PatientController@read');
 Route::post('/patient/createPatientAppointmentForm', 'PatientController@create');
 Route::post('/patient/getPatientAppointment', 'PatientController@get');
 Route::post('/patient/updatePatientAppointmentForm', 'PatientController@update');
+
+
+//Doctor's Appointment
+Route::get('/doctor/register', 'DoctorController@index');
+Route::get('/doctor/dashboard', 'DoctorController@dashboard');
+Route::get('/doctor/readControllerAppointment','DoctorController@read');
+Route::post('/doctor/createControllerAppointmentForm', 'DoctorController@create');
+Route::post('/doctor/getControllerAppointment', 'DoctorController@get');
+Route::post('/doctor/updateControllerAppointmentForm', 'DoctorController@update');

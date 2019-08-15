@@ -38,7 +38,7 @@
                     <div class="col-md-12">
                     <div class="row">
                      <div class="col-md-6"><a href="/patient/register" class="btn btn-white btn-border btn-round mr-2" style="width:100%;">Patient</a></div>
-                     <div class="col-md-6"><a href="#" class="btn btn-secondary btn-round" style="width:100%;">Doctor</a></div>
+                     <div class="col-md-6"><a href="/doctor/register" class="btn btn-secondary btn-round" style="width:100%;">Doctor</a></div>
                     </div>
                     </div>
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
